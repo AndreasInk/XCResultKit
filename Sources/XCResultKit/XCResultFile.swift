@@ -25,7 +25,7 @@ public class XCResultFile {
 	
     public func getInvocationRecord() -> ActionsInvocationRecord? {
         
-        guard let data = xcresulttool(["get", "--path", url.path, "--format", "json"]) else {
+        guard let data = xcresulttool(["get", "--path", url.path, "--format", "json", "--legacy"]) else {
             return nil
         }
         
